@@ -1,0 +1,28 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body, html {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	margin: 0;
+}
+
+/* Styles */
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+
+	.hangman-img {
+		width: 300px;
+		height: 300px;
+	}
+
+
+}
