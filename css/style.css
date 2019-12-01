@@ -90,4 +90,9 @@ body, html {
 .wrapper .letters__key--incorrect {
   background-color: red;
 }
+
+.wrapper .textArea {
+  font-size: 1.9rem;
+  margin: 20px 0 50px;
+}
 /*# sourceMappingURL=style.css.map */

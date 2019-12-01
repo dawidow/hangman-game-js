@@ -18,3 +18,18 @@ for(let i = 0; i < letters.length; i++) {
 	letter.classList.add('letters__key');
 	lettersBoard.appendChild(letter);
 }
+
+const hiddenWord = word => {
+	const textArea = document.querySelector('.textArea');
+	let textLength = word.length,
+		textArray = [];
+
+	for(let i = 0; i < textLength; i++) {
+		textArray.push(' _ ');
+		textArea.textContent = textArray.join(' ');
+	}
+	console.log(word);
+
+}
+
+window.addEventListener('DOMContentLoaded', hiddenWord(word));
