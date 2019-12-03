@@ -27,13 +27,7 @@ const hiddenWord = (word) => {
 }
 
 const checkLetter = e => {
-	if(word.indexOf(e.target.textContent) === -1) {
-		e.target.classList.add('.letters__key--correct');
-		console.log('tak');
-	} else {
-		e.target.classList.add('.letters__key--incorrect');
-		console.log('nie');
-	}
+	// here we will check if the letter you clicked is in the given sentence.
 }
 
 for(let i = 0; i < letters.length; i++) {
