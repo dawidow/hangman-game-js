@@ -64,6 +64,11 @@ body, html {
 				transition: all .3s ease-in-out;
 			}
 
+			&--disabled {
+				cursor: default;
+				color: #ccc;
+			}
+
 			&--correct {
 				background-color: green;
 			}

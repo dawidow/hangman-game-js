@@ -19,7 +19,7 @@ const hiddenWord = (word) => {
 		if(word.charAt(i) == ' ') {
 			wordHidden += '\xa0';
 		} else {
-			wordHidden += ' _ ';
+			wordHidden += '-';
 		}
 	}
 
@@ -28,6 +28,20 @@ const hiddenWord = (word) => {
 
 const checkLetter = e => {
 	// here we will check if the letter you clicked is in the given sentence.
+	let indexedWord = wordHidden.split(''),
+		eTarget = String(e.target.innerText.toLowerCase());
+
+	for(let i = 0; i < wordHidden.length; i++) {
+
+		if(word[i] === eTarget) {
+			wordHidden = eTarget;
+			console.log(wordHidden[i], eTarget, i, wordHidden);
+			textArea.textContent = wordHidden;
+		} else {
+
+		}
+
+	}
 }
 
 for(let i = 0; i < letters.length; i++) {
@@ -36,7 +50,7 @@ for(let i = 0; i < letters.length; i++) {
 	letter.classList.add('letters__key');
 	lettersBoard.appendChild(letter);
 
-	letter.addEventListener('click', checkLetter);
+	letter.addEventListener('click', checkLetter, false);
 }
 
 window.addEventListener('DOMContentLoaded', hiddenWord(word));
