@@ -34,12 +34,14 @@ const checkLetter = e => {
 	for(let i = 0; i < wordHidden.length; i++) {
 
 		if(word[i] === eTarget) {
-			wordHidden = eTarget;
+			indexedWord[i] = eTarget;
 			console.log(wordHidden[i], eTarget, i, wordHidden);
-			textArea.textContent = wordHidden;
 		} else {
+			// error code goes here
 
 		}
+
+		textArea.textContent = indexedWord.join('');;
 
 	}
 }
