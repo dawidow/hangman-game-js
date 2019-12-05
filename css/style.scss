@@ -22,9 +22,22 @@ body, html {
 	align-items: center;
 	width: 100%;
 
+	.choosenLettersIntro, .choosenLetters {
+		text-align: center;
+		margin: 10px auto;
+	}
+
+	.choosenLettersIntro {
+		color: #636363;
+	}
+
+	.choosenLetters {
+		color: #000;
+	}
+
 	.hangman-img {
-		width: 300px;
-		height: 300px;
+		width: 250px;
+		height: 250px;
 	}
 
 	.letters {
@@ -71,10 +84,12 @@ body, html {
 
 			&--correct {
 				background-color: green;
+				color: #fff;
 			}
 
 			&--incorrect {
 				background-color: red;
+				color: #fff;
 			}
 		}
 	}

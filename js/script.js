@@ -6,44 +6,46 @@ const words = [
 ];
 
 const lettersBoard = document.querySelector('.letters'),
-	textArea = document.querySelector('.textArea');
+	textArea = document.querySelector('.textArea'),
+	choosenLetters = document.querySelector('.choosenLetters');
 
 let word = words[Math.floor(Math.random() * words.length)];
 let wordLength = word.length;
-let wordHidden = '';
+let wordHidden = [];
+let choosenLettersArray = [];
+
+let image = document.querySelector('.hangman-img').src;
+let lives = 4;
 
 const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 const hiddenWord = (word) => {
 	for(let i = 0; i < word.length; i++) {
 		if(word.charAt(i) == ' ') {
-			wordHidden += '\xa0';
+			wordHidden.push('\xa0');
 		} else {
-			wordHidden += '-';
+			wordHidden.push('-');
 		}
 	}
 
-	textArea.textContent = wordHidden;
+	textArea.textContent = wordHidden.join(' ');
 }
 
 const checkLetter = e => {
-	// here we will check if the letter you clicked is in the given sentence.
-	let indexedWord = wordHidden.split(''),
-		eTarget = String(e.target.innerText.toLowerCase());
+	let eTarget = String(e.target.innerText.toLowerCase());
 
 	for(let i = 0; i < wordHidden.length; i++) {
 
 		if(word[i] === eTarget) {
-			indexedWord[i] = eTarget;
-			console.log(wordHidden[i], eTarget, i, wordHidden);
-		} else {
-			// error code goes here
-
+			wordHidden[i] = eTarget;
+			e.target.classList.add('letters__key--correct', 'letters__key--disabled');
 		}
 
-		textArea.textContent = indexedWord.join('');;
-
+		textArea.textContent = wordHidden.join(' ');
 	}
+
+	choosenLettersArray.push(eTarget);
+	choosenLetters.textContent = [...new Set(choosenLettersArray)];
 }
 
 for(let i = 0; i < letters.length; i++) {

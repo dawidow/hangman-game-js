@@ -32,9 +32,22 @@ body, html {
   width: 100%;
 }
 
+.wrapper .choosenLettersIntro, .wrapper .choosenLetters {
+  text-align: center;
+  margin: 10px auto;
+}
+
+.wrapper .choosenLettersIntro {
+  color: #636363;
+}
+
+.wrapper .choosenLetters {
+  color: #000;
+}
+
 .wrapper .hangman-img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 
 .wrapper .letters {
@@ -83,12 +96,19 @@ body, html {
   transition: all .3s ease-in-out;
 }
 
+.wrapper .letters__key--disabled {
+  cursor: default;
+  color: #ccc;
+}
+
 .wrapper .letters__key--correct {
   background-color: green;
+  color: #fff;
 }
 
 .wrapper .letters__key--incorrect {
   background-color: red;
+  color: #fff;
 }
 
 .wrapper .textArea {
