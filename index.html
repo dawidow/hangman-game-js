@@ -12,10 +12,28 @@
 	<div class="wrapper">
 		<img src="./assets/hangman_5.svg" alt="" class="hangman-img">
 		<div class="textArea"></div>
-		<span class="choosenLettersIntro">
-			The letters that you choose: <div class="choosenLetters"></div>
-		</span>
+
+		<div class="gameSummary">
+			<span class="choosenLettersIntro">
+				Letters that have been selected: <div class="choosenLetters">-</div>
+			</span>
+			<span class="lives">
+				Current number of lives: <div class="livesCount">5</div>
+			</span>
+		</div>
 		<div class="letters"></div>
+	</div>
+	<div class="game-loss hidden">
+		<img class="game__image--loss" src="./assets/gameover.svg" alt="gameover">
+		<h2 class="game__info">Upss... This time you couldn't guess the password. Try again by clicking on the button below.</h2>
+		<p class="game__passwordInfo">The correct password is: <span class="game__correctPassword"></span></p>
+		<button class="game__button">Play again!</button>
+	</div>
+	<div class="game-win hidden">
+		<img class="game__image--win" src="./assets/hooray.svg" alt="gameover">
+		<h2 class="game__info">Hooray! You managed to guess the password. Will you try your hand at it again?</h2>
+		<p class="game__lives">The remaining number of lives: <span class="game__currentLives"></span></p>
+		<button class="game__button">Play again!</button>
 	</div>
 
 	<script src="js/script.js"></script>
