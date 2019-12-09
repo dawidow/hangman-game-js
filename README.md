@@ -5,18 +5,18 @@ I present a project of Hangman game which I wrote from scratch in JavaScript. In
 🚀 Below I present a handful of information about the application:
 
 ### Technologies used:
-✅ HTML5
-✅ CSS3 (SCSS Preprocessor, Responsive Web Design)
-✅ JavaScript (ES6+)
+✅ HTML5 <br />
+✅ CSS3 (SCSS Preprocessor, Responsive Web Design)<br />
+✅ JavaScript (ES6+)<br />
 ✅ SVG Graphics
 
 ### What could have been done better:
 
-❇️ Keyboard support
+❇️ Keyboard support<br />
 ❇️ Better User Interface of the main application screen
 
 ## How to use:
 
-The best way to do this is to download the project by clicking *Clone or download -> Download ZIP* and run the file *index.html* from your computer.
+The best way to do this is to download the project by clicking *Clone or download -> Download ZIP* and run the file *index.html* from your computer.<br />
 
 🎉 I hope you enjoyed. Thank you for your interest in my project and your time. I appreciate that.
