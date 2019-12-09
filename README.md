@@ -17,6 +17,6 @@ I present a project of Hangman game which I wrote from scratch in JavaScript. In
 
 ## How to use:
 
-The best way to do this is to download the project by clicking *Clone or download -> Download ZIP* and run the file *index.html* from your computer.<br />
+The best way to do this is to download the project by clicking __Clone or download -> Download ZIP__ and run the file __index.html__ from your computer.<br />
 
 🎉 I hope you enjoyed. Thank you for your interest in my project and your time. I appreciate that.
