@@ -16,10 +16,15 @@ let image = document.querySelector('.hangman-img'),
 
 const startGame = () => {
 	const words = [
-		'front end developer',
-		'programming is more than passion',
-		'english is must have language for all developers',
-		'vue is a javascript framework',
+		'vue',
+		'react',
+		'nodejs',
+		'javascript',
+		'css',
+		'html',
+		'sass',
+		'webpack',
+		'git'
 	];
 
 	let word = words[Math.floor(Math.random() * words.length)],
