@@ -136,7 +136,7 @@ body, html {
 .game-win .game__image--loss, .game-loss .game__image--loss {
   display: block;
   margin: 20px auto;
-  width: 50%;
+  width: 80%;
   height: 50%;
 }
 
@@ -148,8 +148,10 @@ body, html {
 }
 
 .game__info {
+  margin: 0 auto;
   text-align: center;
   color: #fff;
+  max-width: 80%;
 }
 
 .game__passwordInfo, .game__lives {
@@ -169,7 +171,8 @@ body, html {
   background-color: #0077ff;
   border: none;
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 10px 30px;
+  font-size: 1.1em;
   font-weight: 700;
   cursor: pointer;
   -webkit-transition: all .3s linear;
@@ -182,5 +185,21 @@ body, html {
 
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .letters__key {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.1em;
+  }
+  .wrapper .hangman-img {
+    width: 200px;
+    height: 200px;
+  }
+  .game-win .game__image--loss, .game-win .game__image--win, .game-loss .game__image--loss, .game-loss .game__image--win {
+    margin: 5px auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */

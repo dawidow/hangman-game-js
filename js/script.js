@@ -31,6 +31,8 @@ const startGame = () => {
 	image.src = `./assets/hangman_5.svg`;
 	gameLoss.classList.add('hidden');
 	gameWin.classList.add('hidden');
+	choosenLetters.textContent = '-';
+	livesCount.textContent = 5;
 
 	const hiddenWord = (word) => {
 		for(let i = 0; i < word.length; i++) {
@@ -49,7 +51,6 @@ const startGame = () => {
 			correctLetter = false;
 
 		for(let i = 0; i < wordHidden.length; i++) {
-
 			if(word[i] === eTarget) {
 				correctLetter = true;
 				wordHidden[i] = eTarget;
@@ -64,37 +65,32 @@ const startGame = () => {
 					e.target.classList.add('letters__key--correct', 'letters__key--disabled');
 				}
 			}
-			console.log(lives);
 		} else {
 			image.src = `./assets/hangman_${lives--}.svg`;
 			e.target.classList.add('letters__key--incorrect', 'letters__key--disabled');
 		}
 
-
 		livesCount.textContent = lives;
 		choosenLettersArray.push(eTarget.toUpperCase());
 		choosenLetters.textContent = [...new Set(choosenLettersArray)];
 
-		gameResult(lives, word, wordHidden);
+		gameResult(lives, word, wordHidden, choosenLettersArray, words);
 	}
 
-	if(!lettersAggregate) {
-		lettersAggregate = true;
-		for(let i = 0; i < letters.length; i++) {
-			let letter = document.createElement('div');
-			letter.classList.remove('letters__key--correct', 'letters__key--incorrect', 'letters__key--disabled')
-			letter.textContent = letters[i].toUpperCase();
-			letter.classList.add('letters__key');
-			lettersBoard.appendChild(letter);
+	lettersBoard.innerHTML = '';
+	for(let i = 0; i < letters.length; i++) {
+		let letter = document.createElement('div');
+		letter.textContent = letters[i].toUpperCase();
+		letter.classList.add('letters__key');
+		lettersBoard.appendChild(letter);
 
-			letter.addEventListener('click', checkLetter, false);
-		}
+		letter.addEventListener('click', checkLetter, false);
 	}
 
 	hiddenWord(word);
 }
 
-const gameResult = (gameChances, word, wordHidden) => {
+const gameResult = (gameChances, word, wordHidden, choosenLetters, words) => {
 	if(word === wordHidden.join('')) {
 		gameWin.classList.remove('hidden');
 		currentLives.textContent = gameChances;
