@@ -3,7 +3,7 @@
 I present a project of Hangman game which I wrote from scratch in JavaScript. In this project I took care of the responsiveness of the game, logic that predicts most of the situations, interesting User Interface screen winning and losing the game.
 
 ## Demo
-[Live demo](https://google.com/)
+[Live demo](https://dawidow.github.io/hangman-game-js/)
 
 🚀 Below I present a handful of information about the application:
 
