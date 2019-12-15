@@ -2,6 +2,9 @@
 
 I present a project of Hangman game which I wrote from scratch in JavaScript. In this project I took care of the responsiveness of the game, logic that predicts most of the situations, interesting User Interface screen winning and losing the game.
 
+## Demo
+[Live demo](https://google.com/)
+
 🚀 Below I present a handful of information about the application:
 
 ### Technologies used:
